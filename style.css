@@ -1,0 +1,375 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080d18,
+            #101827,
+            #172554
+        );
+
+    color: #e5e7eb;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+
+/* Main Card */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 8px;
+
+    color: #93c5fd;
+
+    font-size: 30px;
+}
+
+
+/* Small Color Line */
+
+.color-line {
+    width: 90px;
+    height: 4px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #60a5fa,
+            #8b5cf6
+        );
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    text-align: center;
+
+    color: #94a3b8;
+
+    margin-bottom: 28px;
+
+    font-size: 15px;
+}
+
+
+/* Sections */
+
+.section {
+    margin-bottom: 20px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* Textarea, Select and Input */
+
+textarea,
+select,
+input {
+    width: 100%;
+
+    background: #0b1220;
+
+    color: #f8fafc;
+
+    border: 1px solid #3b4b63;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* Placeholder */
+
+textarea::placeholder,
+input::placeholder {
+    color: #64748b;
+}
+
+
+/* Focus */
+
+textarea:focus,
+select:focus,
+input:focus {
+
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 2px rgba(96, 165, 250, 0.12);
+}
+
+
+/* Select */
+
+select {
+    cursor: pointer;
+}
+
+
+/* Key Section */
+
+#keySection {
+    display: none;
+}
+
+
+/* Key Hint */
+
+#keyHint {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* Buttons */
+
+.button-row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+button {
+
+    flex: 1;
+
+    min-width: 120px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #475569;
+
+    border-radius: 9px;
+
+    background: #263449;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Button Hover */
+
+button:hover {
+
+    background: #334a68;
+
+    border-color: #64748b;
+
+    transform: translateY(-1px);
+}
+
+
+/* Selected Button */
+
+button.selected {
+
+    background: #3b5f88;
+
+    border-color: #60a5fa;
+
+    color: white;
+
+    box-shadow:
+        0 0 12px rgba(96, 165, 250, 0.2);
+}
+
+
+/* Result */
+
+.result-box {
+
+    margin-top: 25px;
+}
+
+
+#result {
+
+    border-color: #475569;
+
+    background: #0a101d;
+}
+
+
+/* Status Message */
+
+#status {
+
+    margin-top: 15px;
+
+    padding: 11px 13px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    display: none;
+}
+
+
+/* ERROR */
+
+#status.error {
+
+    display: block;
+
+    color: #fecaca;
+
+    background: #3f1515;
+
+    border: 1px solid #ef4444;
+}
+
+
+/* SUCCESS */
+
+#status.success {
+
+    display: block;
+
+    color: #bbf7d0;
+
+    background: #12351f;
+
+    border: 1px solid #22c55e;
+}
+
+
+/* INFORMATION */
+
+#status.info {
+
+    display: block;
+
+    color: #bfdbfe;
+
+    background: #172554;
+
+    border: 1px solid #3b82f6;
+}
+
+
+/* Footer */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    button {
+        min-width: 100%;
+    }
+}
+

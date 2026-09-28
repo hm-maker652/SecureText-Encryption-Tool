@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SecureText - Encryption Tool</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js">
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>SecureText</h1>
+
+        <div class="color-line"></div>
+
+        <p class="subtitle">
+            Web-Based Text Encryption & Decryption Tool
+        </p>
+
+
+
+        <div class="section">
+
+            <label for="inputText">
+                Enter Text
+            </label>
+
+            <textarea
+                id="inputText"
+                placeholder="Enter the text you want to encrypt or decrypt..."
+            ></textarea>
+
+        </div>
+
+
+
+        <div class="section">
+
+            <label for="algorithm">
+                Select Encryption Method
+            </label>
+
+            <select id="algorithm">
+
+                <option value="">
+                    -- Select Method --
+                </option>
+
+                <option value="caesar">
+                    Caesar Cipher
+                </option>
+
+                <option value="vigenere">
+                    Vigenère Cipher
+                </option>
+
+                <option value="vernam">
+                    Vernam Cipher
+                </option>
+
+                <option value="railfence">
+                    Rail Fence Cipher
+                </option>
+
+                <option value="base64">
+                    Base64
+                </option>
+
+                <option value="aes">
+                    AES
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div
+            class="section"
+            id="keySection"
+        >
+
+            <label
+                for="key"
+                id="keyLabel"
+            >
+                Key
+            </label>
+
+            <input
+                type="text"
+                id="key"
+                placeholder="Enter key"
+            >
+
+            <small id="keyHint">
+                Enter the required key.
+            </small>
+
+        </div>
+
+
+
+        <div class="button-row">
+
+            <button id="encryptBtn">
+                Encrypt
+            </button>
+
+            <button id="decryptBtn">
+                Decrypt
+            </button>
+
+            <button id="hashBtn">
+                SHA-256
+            </button>
+
+            <button id="copyBtn">
+                Copy Result
+            </button>
+
+            <button id="clearBtn">
+                Clear
+            </button>
+
+        </div>
+
+
+
+        <div id="status"></div>
+
+
+        <!-- Result -->
+
+        <div class="result-box">
+
+            <label for="result">
+                Result
+            </label>
+
+            <textarea
+                id="result"
+                placeholder="Your result will appear here..."
+                readonly
+            ></textarea>
+
+        </div>
+
+
+
+        <div class="footer">
+            SecureText • Text Encryption & Decryption Tool
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
